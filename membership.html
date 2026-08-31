@@ -4,9 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Italian Club 🇮🇹 - Membership</title>
-  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="styles.css" />
   <script src="https://kit.fontawesome.com/0196458ef5.js" crossorigin="anonymous"></script>
-  <script defer src="js/script.js"></script>
+  <script defer src="script.js"></script>
 </head>
 <body>
   <header>
@@ -18,13 +18,11 @@
         <li><a href="events.html">Events</a></li>
         <li><a href="membership.html" class="active">Membership</a></li>
       </ul>
-      <!-- Dark Mode Button is added here for added functionality -->
       <button id="darkModeToggle" class="btn small" aria-label="Toggle Dark Mode">🌙 Dark Mode</button>
     </nav>
   </header>
 
   <main>
-    <!-- Membership Benefits -->
     <section class="membership-benefits">
       <h2>🎉 Why Join the Italian Club?</h2>
       <ul>
@@ -36,7 +34,6 @@
       </ul>
     </section>
 
-    <!-- Membership Sign-Up Form -->
     <section class="membership-form">
       <h2>📝😊🇮🇹 Become a Member</h2>
       <form action="submit-membership.php" method="post">
@@ -57,8 +54,8 @@
 
         <button type="submit" class="btn" aria-label="Submit Membership Form">Join Now</button>
       </form>
+      <p><small>Portfolio demo note: the original PHP form handler is not included in this repository, so form submission is not active on GitHub Pages.</small></p>
     </section>
-
 
     <section class="dog-mascot">
       <h2>🐶 Meet Our Mascot!</h2>
@@ -66,13 +63,12 @@
       <button id="fetchDogBtn" class="btn secondary" aria-label="Fetch a random dog breed">Fetch a Random Dog</button>
       <div id="dogInfo" class="dog-info"></div>
     </section>
-
   </main>
 
   <footer>
     <p>
       © 2025 Italian Club | Follow us on
-      <a href="https://www.instagram.com/italianclub_uncc/?hl=en" target="_blank">
+      <a href="https://www.instagram.com/italianclub_uncc/?hl=en" target="_blank" rel="noopener noreferrer">
         <i class="fa-brands fa-instagram"></i> Instagram</a>
     </p>
   </footer>
