@@ -1,8 +1,8 @@
 # Italian Club Website
 
-A multi-page website prototype for an Italian Club at UNC Charlotte, built with HTML, CSS, and JavaScript.
+A multi-page front-end website prototype for an Italian Club at UNC Charlotte, built with HTML, CSS, and JavaScript.
 
-The project was created as a final course project in April 2025 and focuses on clear navigation, event information, membership content, and interactive front-end features.
+The project was created as a final course project in April 2025 and focuses on clear navigation, event information, membership content, accessibility-minded controls, and interactive front-end features.
 
 ## Features
 
@@ -33,15 +33,11 @@ italian-club-website/
 ├── about.html
 ├── events.html
 ├── membership.html
-├── css/
-│   └── styles.css
-├── js/
-│   └── script.js
-├── images/
-│   ├── pasta-night.jpg
-│   ├── film-night.png
-│   └── culture-festival.jpg
-├── .gitignore
+├── styles.css
+├── script.js
+├── pasta-night.jpg
+├── film-night.png
+├── culture-festival.jpg
 └── README.md
 ```
 
@@ -63,21 +59,50 @@ http://localhost:8000
 
 ## GitHub Pages
 
-This project can be hosted as a static site with GitHub Pages. The HTML, CSS, JavaScript, carousel, modal, accordion, dark mode, and other browser-side interactions can be served directly from the repository.
+This project is suitable for GitHub Pages because the main site is built with static HTML, CSS, and JavaScript.
+
+The following browser-side features can run on a GitHub Pages deployment:
+
+- Multi-page navigation
+- Dark mode
+- Accordion interaction
+- RSVP confirmation modal
+- Event carousel
+- Fetch API mascot feature
 
 ### Membership form note
 
-The membership page contains a form whose original action points to `submit-membership.php`. A PHP backend handler was not included with the project files, so the form submission itself is not functional on a static GitHub Pages deployment. The rest of the front-end can still be demonstrated normally.
+The membership page contains a form whose original action points to `submit-membership.php`. A PHP backend handler was not included with the original project files, so the form submission itself is not functional on a static GitHub Pages deployment. A note is displayed on the Membership page so visitors understand that it is a portfolio prototype.
 
 ## Project Goals
 
 The site was designed for students and faculty interested in Italian culture at UNC Charlotte. The project emphasizes simple navigation, community information, event discovery, membership engagement, and interactive UI elements.
 
-Potential future enhancements include a larger photo gallery, cultural blog content, and email notifications for event RSVPs.
+The original final-project documentation identified future enhancements such as a larger gallery of club-event photos, cultural blog content, and email notifications for members who RSVP to events.
+
+## Skills Demonstrated
+
+- Front-end web development
+- HTML structure and multi-page navigation
+- CSS styling and responsive layout
+- JavaScript DOM manipulation
+- Event handling
+- Modal and carousel interactions
+- Dark mode implementation
+- REST API integration with `fetch`
+- Basic asynchronous JavaScript
+- Error handling for API requests
+- UI design and usability improvements
 
 ## Notes on Images
 
-The event images in this repository were part of the original project assets. Before publishing this repository publicly, verify that you have permission or an appropriate license to redistribute each image. Replace any image you do not have rights to publish.
+The event images in this repository were part of the original project assets. Before reusing or redistributing them outside this academic portfolio project, verify that you have permission or an appropriate license for each image.
+
+## Project Status
+
+**Academic final project / front-end prototype**
+
+The repository preserves the original project structure and functionality while correcting file paths so the website can be viewed and demonstrated more reliably.
 
 ## Author
 
