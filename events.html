@@ -4,9 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Italian Club 🇮🇹 - Events</title>
-  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="styles.css" />
   <script src="https://kit.fontawesome.com/0196458ef5.js" crossorigin="anonymous"></script>
-  <script defer src="js/script.js"></script>
+  <script defer src="script.js"></script>
 </head>
 <body>
   <header>
@@ -18,13 +18,11 @@
         <li><a href="events.html" class="active">Events</a></li>
         <li><a href="membership.html">Membership</a></li>
       </ul>
-        <!-- Dark Mode Button is added here for added functionality -->
-        <button id="darkModeToggle" class="btn small" aria-label="Toggle Dark Mode">🌙 Dark Mode</button>
+      <button id="darkModeToggle" class="btn small" aria-label="Toggle Dark Mode">🌙 Dark Mode</button>
     </nav>
   </header>
 
   <main>
-    <!-- Upcoming Events Section -->
     <section class="upcoming-events">
       <h2>📅 Upcoming Events</h2>
 
@@ -32,49 +30,45 @@
         <h3>Pasta Night 🍝</h3>
         <p>Join us for an evening of homemade pasta and great company!</p>
         <p><strong>Date:</strong> March 15, 2025 | <strong>Location:</strong> Greek Village, House #13 🏡</p>
-        <button class="btn" onclick="openModal()" aria-label="RSVP for event">RSVP Now</button>
-
+        <button class="btn" onclick="openModal()" aria-label="RSVP for Pasta Night">RSVP Now</button>
       </div>
 
       <div class="event">
         <h3>Italian Film Night 🎬</h3>
         <p>Experience the magic of Italian cinema with classics and modern hits.</p>
         <p><strong>Date:</strong> April 5, 2025 | <strong>Location:</strong> Student Union Theater 🎭</p>
-        <button class="btn" onclick="openModal()" aria-label="RSVP for event">RSVP Now</button>
-
+        <button class="btn" onclick="openModal()" aria-label="RSVP for Italian Film Night">RSVP Now</button>
       </div>
     </section>
 
-    <!-- Past Events Section -->
     <section class="past-events">
       <h2>📸 Past Events</h2>
       <div class="carousel">
-        <button class="carousel-btn prev" onclick="moveSlide(-1)" aria-label="Previous Slide">&#10094;</button>
+        <button class="carousel-btn prev" onclick="moveSlide(-1)" aria-label="Previous slide">&#10094;</button>
 
         <div class="carousel-slide fade">
-          <img src="images/pasta-night.jpg" alt="Pasta Night 2024" />
+          <img src="pasta-night.jpg" alt="Pasta Night 2024" />
           <p>Pasta Night 2024 🍝 - An unforgettable night of Italian cuisine!</p>
         </div>
 
         <div class="carousel-slide fade">
-          <img src="images/film-night.png" alt="Italian Film Night" />
+          <img src="film-night.png" alt="Italian Film Night" />
           <p>Film Night 🎬 - <em>Welcome Venice</em> by Andrea Segre (2021)</p>
         </div>
 
         <div class="carousel-slide fade">
-          <img src="images/culture-festival.jpg" alt="Culture Festival" />
+          <img src="culture-festival.jpg" alt="Culture Festival" />
           <p>Culture Festival 🇮🇹🎭 - Showcasing Italian traditions.</p>
         </div>
 
-        <button class="carousel-btn next" onclick="moveSlide(1)" aria-label="Next Slide">&#10095;</button>
+        <button class="carousel-btn next" onclick="moveSlide(1)" aria-label="Next slide">&#10095;</button>
       </div>
     </section>
   </main>
 
-  <!-- Modal -->
-  <div id="modal" class="modal">
+  <div id="modal" class="modal" role="dialog" aria-modal="true" aria-label="RSVP confirmation">
     <div class="modal-content">
-      <span class="close-button" onclick="closeModal()">&times;</span>
+      <span class="close-button" onclick="closeModal()" aria-label="Close">&times;</span>
       <p>🎉 Thank you for your RSVP!</p>
     </div>
   </div>
@@ -82,7 +76,7 @@
   <footer>
     <p>
       © 2025 Italian Club | Follow us on
-      <a href="https://www.instagram.com/italianclub_uncc/?hl=en" target="_blank">
+      <a href="https://www.instagram.com/italianclub_uncc/?hl=en" target="_blank" rel="noopener noreferrer">
         <i class="fa-brands fa-instagram"></i> Instagram</a>
     </p>
   </footer>
