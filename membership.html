@@ -1,76 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Italian Club 🇮🇹 - Membership</title>
-  <link rel="stylesheet" href="styles.css" />
-  <script src="https://kit.fontawesome.com/0196458ef5.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="An academic Italian Club website prototype exploring culture, community, and events at UNC Charlotte.">
+  <title>Membership | Italian Club</title>
+  <link rel="stylesheet" href="styles.css">
   <script defer src="script.js"></script>
 </head>
 <body>
-  <header>
-    <h1>Italian Club 🇮🇹</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="events.html">Events</a></li>
-        <li><a href="membership.html" class="active">Membership</a></li>
-      </ul>
-      <button id="darkModeToggle" class="btn small" aria-label="Toggle Dark Mode">🌙 Dark Mode</button>
-    </nav>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="demo-banner">Academic portfolio prototype · April 2025 · No memberships or RSVPs are collected.</div>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html"><span class="flag-mark" aria-hidden="true"></span>Italian Club<span class="brand-subtitle">UNC Charlotte · Academic project</span></a>
+      <nav aria-label="Main navigation">
+        <ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="events.html">Events</a></li><li><a href="membership.html" class="active" aria-current="page">Membership</a></li></ul>
+      </nav>
+      <button id="darkModeToggle" class="btn small secondary" type="button" aria-pressed="false" aria-label="Dark mode">Dark mode</button>
+    </div>
   </header>
-
-  <main>
-    <section class="membership-benefits">
-      <h2>🎉 Why Join the Italian Club?</h2>
-      <ul>
-        <li>🎭 Experience Italian cultural events & festivals.</li>
-        <li>🍕 Attend exclusive Italian cooking workshops.</li>
-        <li>🗣️ Practice Italian with fellow students.</li>
-        <li>🎬 Enjoy Italian film screenings & discussions.</li>
-        <li>🤝 Network & make new friends at UNC Charlotte.</li>
-      </ul>
-    </section>
-
-    <section class="membership-form">
-      <h2>📝😊🇮🇹 Become a Member</h2>
-      <form action="submit-membership.php" method="post">
-        <label for="name">Full Name:</label>
-        <input type="text" id="name" name="name" required />
-
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required />
-
-        <label for="major">Major (optional):</label>
-        <input type="text" id="major" name="major" />
-
-        <label for="leadership">Interested in a leadership role?</label>
-        <select id="leadership" name="leadership">
-          <option value="yes">Yes</option>
-          <option value="no">No</option>
-        </select>
-
-        <button type="submit" class="btn" aria-label="Submit Membership Form">Join Now</button>
-      </form>
-      <p><small>Portfolio demo note: the original PHP form handler is not included in this repository, so form submission is not active on GitHub Pages.</small></p>
-    </section>
-
-    <section class="dog-mascot">
-      <h2>🐶 Meet Our Mascot!</h2>
-      <p>Click the button below to fetch a random dog breed!</p>
-      <button id="fetchDogBtn" class="btn secondary" aria-label="Fetch a random dog breed">Fetch a Random Dog</button>
-      <div id="dogInfo" class="dog-info"></div>
-    </section>
+  <main id="main" tabindex="-1">
+    <section class="page-intro"><p class="eyebrow">Make room for community</p><h1>Explore membership</h1><p class="lead">Meet people who share your curiosity about Italian culture, food, language, and film.</p></section>
+    <div class="membership-grid">
+      <section class="card membership-benefits"><h2>Why join?</h2><ul class="benefit-list"><li>Experience Italian cultural events and festivals.</li><li>Attend Italian cooking workshops.</li><li>Practice Italian with fellow students.</li><li>Enjoy film screenings and discussions.</li><li>Connect with the UNC Charlotte community.</li></ul><p class="notice">This page is a portfolio demo. For current membership information, visit the club’s Instagram linked below.</p></section>
+      <section class="card membership-form"><h2>Try the membership form</h2><p id="form-note">Demo only. Use fictional details. Nothing is sent, saved, or used to create a membership.</p>
+        <form id="membershipForm" aria-describedby="form-note">
+          <div class="field"><label for="name">Full name</label><input type="text" id="name" name="name" placeholder="Example Student" autocomplete="off" required maxlength="100"></div>
+          <div class="field"><label for="email">Email</label><input type="email" id="email" name="email" placeholder="student@example.com" autocomplete="off" required maxlength="254"></div>
+          <div class="field"><label for="major">Major <span class="muted">(optional)</span></label><input type="text" id="major" name="major" autocomplete="off" maxlength="100"></div>
+          <div class="field"><label for="leadership">Interested in a leadership role?</label><select id="leadership" name="leadership"><option value="no">No</option><option value="yes">Yes</option></select></div>
+          <button type="submit" class="btn" id="membershipSubmit" disabled>Preview submission</button>
+          <noscript><p>This form preview needs JavaScript. No form data will be sent.</p></noscript>
+        </form>
+        <p id="formStatus" class="status-message" role="status"></p>
+      </section>
+    </div>
+    <section class="card culture-card" aria-labelledby="phrase-heading"><p class="eyebrow">A little Italian</p><h2 id="phrase-heading">Start a conversation</h2><p>Learn a simple phrase you can use with friends.</p><button id="phraseBtn" class="btn secondary" type="button">Show an Italian phrase</button><div id="phraseInfo" class="phrase-info" aria-live="polite"></div></section>
   </main>
-
   <footer>
-    <p>
-      © 2025 Italian Club | Follow us on
-      <a href="https://www.instagram.com/italianclub_uncc/?hl=en" target="_blank" rel="noopener noreferrer">
-        <i class="fa-brands fa-instagram"></i> Instagram</a>
-    </p>
+    <div class="footer-inner"><p>Italian Club · Academic prototype, 2025</p><a href="https://www.instagram.com/italianclub_uncc/?hl=en" target="_blank" rel="noopener noreferrer">Instagram <span class="sr-only">(opens in a new tab)</span><span aria-hidden="true">↗</span></a></div>
   </footer>
 </body>
 </html>

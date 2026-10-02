@@ -7,23 +7,20 @@ The project was created as a final course project in April 2025 and focuses on c
 ## Features
 
 - Multi-page navigation across Home, About Us, Events, and Membership pages
-- Italian-themed gradient header and responsive layout
-- Dark/light mode toggle with a changing button label
+- Italian-themed header, homepage photo, and responsive layouts
+- Persistent dark/light mode with accessible controls and system-theme support
 - Expandable accordion for club history
-- RSVP confirmation modal for events
-- Auto-advancing and manually controlled event image carousel
-- Membership form UI
-- Fetch API integration that displays a randomly selected dog breed as a club mascot
-- Button hover effects and secondary button styling
+- Clearly labeled RSVP preview with a keyboard-accessible modal
+- Event image carousel with manual controls, pause/play, and reduced-motion support
+- Membership form preview with validation; no data is sent or saved
+- Italian phrase feature with English translations
+- Visible keyboard focus, skip navigation, and active-page indicators
 
 ## Tech Stack
 
 - HTML5
 - CSS3
 - JavaScript
-- Fetch API
-- Font Awesome
-- Dog API (`dogapi.dog`)
 
 ## Project Structure
 
@@ -64,15 +61,19 @@ This project is suitable for GitHub Pages because the main site is built with st
 The following browser-side features can run on a GitHub Pages deployment:
 
 - Multi-page navigation
-- Dark mode
+- Persistent dark mode
 - Accordion interaction
-- RSVP confirmation modal
+- RSVP preview modal
 - Event carousel
-- Fetch API mascot feature
+- Italian phrase feature
 
 ### Membership form note
 
-The membership page contains a form whose original action points to `submit-membership.php`. A PHP backend handler was not included with the original project files, so the form submission itself is not functional on a static GitHub Pages deployment. A note is displayed on the Membership page so visitors understand that it is a portfolio prototype.
+The membership form is an explicit front-end demonstration. JavaScript prevents submission, displays a demo message, and clears the fields. It has no PHP handler, backend, or membership storage. The submit button stays disabled when JavaScript is unavailable. Use fictional details when trying it.
+
+RSVP buttons also demonstrate the interface only; no registration is made. Events, leadership, meeting details, and history are labeled as original 2025 project content rather than verified current club information.
+
+The only saved preference is the selected color theme in browser local storage. Membership details and RSVP actions are not stored.
 
 ## Project Goals
 
@@ -89,9 +90,9 @@ The original final-project documentation identified future enhancements such as 
 - Event handling
 - Modal and carousel interactions
 - Dark mode implementation
-- REST API integration with `fetch`
-- Basic asynchronous JavaScript
-- Error handling for API requests
+- Browser preference storage with `localStorage`
+- Client-side form validation and demo submission handling
+- Keyboard-accessible modal and reduced-motion behavior
 - UI design and usability improvements
 
 ## Notes on Images
@@ -102,7 +103,7 @@ The event images in this repository were part of the original project assets. Be
 
 **Academic final project / front-end prototype**
 
-The repository preserves the original project structure and functionality while correcting file paths so the website can be viewed and demonstrated more reliably.
+The repository preserves the original academic scope, pages, and image assets while improving readability, accessibility, mobile layout, and the honesty of demo interactions. No production membership or RSVP service is included. The original dog API demo was replaced by an Italian phrase feature to better fit the club theme.
 
 ## Author
 

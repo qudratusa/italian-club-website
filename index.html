@@ -1,61 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Italian Club 🇮🇹</title>
-  <link rel="stylesheet" href="styles.css" />
-  <script src="https://kit.fontawesome.com/0196458ef5.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="An academic Italian Club website prototype exploring culture, community, and events at UNC Charlotte.">
+  <title>Home | Italian Club</title>
+  <link rel="stylesheet" href="styles.css">
   <script defer src="script.js"></script>
 </head>
 <body>
-  <header>
-    <h1>Italian Club 🇮🇹</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="events.html">Events</a></li>
-        <li><a href="membership.html">Membership</a></li>
-      </ul>
-      <button id="darkModeToggle" class="btn small" aria-label="Toggle Dark Mode">🌙 Dark Mode</button>
-    </nav>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="demo-banner">Academic portfolio prototype · April 2025 · No memberships or RSVPs are collected.</div>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html"><span class="flag-mark" aria-hidden="true"></span>Italian Club<span class="brand-subtitle">UNC Charlotte · Academic project</span></a>
+      <nav aria-label="Main navigation">
+        <ul><li><a href="index.html" class="active" aria-current="page">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="events.html">Events</a></li><li><a href="membership.html">Membership</a></li></ul>
+      </nav>
+      <button id="darkModeToggle" class="btn small secondary" type="button" aria-pressed="false" aria-label="Dark mode">Dark mode</button>
+    </div>
   </header>
-
-  <main>
-    <section>
-      <h2>Welcome to the Italian Club at UNC Charlotte! 🇮🇹</h2>
-      <p>Celebrating Italian culture, language, and traditions. Join us for exciting events and community engagement.</p>
-      <p><a class="btn" href="membership.html">Join Now</a></p>
+  <main id="main" tabindex="-1">
+    <section class="hero" aria-labelledby="welcome-heading">
+      <div>
+        <p class="eyebrow">Culture. Language. Community.</p>
+        <h1 id="welcome-heading">A little Italy.<br>A shared community.</h1>
+        <p class="lead">Welcome to the Italian Club at UNC Charlotte. Celebrate Italian culture, language, and traditions through food, film, and conversation.</p>
+        <div class="actions"><a class="btn" href="membership.html">Explore membership</a><a class="btn secondary" href="events.html">Explore sample events</a></div>
+      </div>
+      <figure class="hero-photo"><img src="pasta-night.jpg" alt="Pasta Night image from the original Italian Club project"><figcaption>Food brings people together · Original project image</figcaption></figure>
     </section>
-
-    <section>
-      <h2>Upcoming Events</h2>
-      <div class="event">
-        <h3>Pasta Night 🍝</h3>
-        <p>Join us for an evening of homemade pasta and great company!</p>
-        <p><strong>Date:</strong> March 15, 2025 | <strong>Location:</strong> Greek Village, House #13 🏡</p>
-        <p><a class="btn" href="events.html">View All Events</a></p>
+    <section aria-labelledby="featured-heading">
+      <div class="section-heading"><p class="eyebrow">From the original project</p><h2 id="featured-heading">Sample event · Spring 2025</h2><p>Archived example content from the academic prototype.</p></div>
+      <article class="event featured-event">
+        <div><span class="tag">Food & community</span><h3>Pasta Night</h3><p>An evening of homemade pasta and great company.</p><p class="event-meta"><strong>Date:</strong> March 15, 2025<br><strong>Location:</strong> Greek Village, House #13</p></div>
+        <a class="btn secondary" href="events.html">View sample events</a>
+      </article>
+    </section>
+    <section aria-labelledby="benefits-heading">
+      <div class="section-heading"><p class="eyebrow">Find your connection</p><h2 id="benefits-heading">Why join the Italian Club?</h2></div>
+      <div class="card-grid">
+        <article class="card"><h3>Culture & traditions</h3><p>Discover Italian heritage through cultural events and festivals.</p></article>
+        <article class="card"><h3>Food & film</h3><p>Share cooking workshops and classic or modern Italian film nights.</p></article>
+        <article class="card"><h3>Language & friends</h3><p>Practice Italian and connect with fellow students.</p></article>
       </div>
     </section>
-
-    <section>
-      <h2>Why Join the Italian Club?</h2>
-      <ul>
-        <li>🎭 Cultural Events & Festivals</li>
-        <li>🍕 Italian Cooking Workshops</li>
-        <li>🗣️ Language Practice & Networking</li>
-        <li>🎬 Classic & Modern Italian Film Nights</li>
-      </ul>
-    </section>
   </main>
-
   <footer>
-    <p>
-      © 2025 Italian Club | Follow us on
-      <a href="https://www.instagram.com/italianclub_uncc/?hl=en" target="_blank" rel="noopener noreferrer">
-        <i class="fa-brands fa-instagram"></i> Instagram</a>
-    </p>
+    <div class="footer-inner"><p>Italian Club · Academic prototype, 2025</p><a href="https://www.instagram.com/italianclub_uncc/?hl=en" target="_blank" rel="noopener noreferrer">Instagram <span class="sr-only">(opens in a new tab)</span><span aria-hidden="true">↗</span></a></div>
   </footer>
 </body>
 </html>

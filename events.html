@@ -1,84 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Italian Club 🇮🇹 - Events</title>
-  <link rel="stylesheet" href="styles.css" />
-  <script src="https://kit.fontawesome.com/0196458ef5.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="An academic Italian Club website prototype exploring culture, community, and events at UNC Charlotte.">
+  <title>Events | Italian Club</title>
+  <link rel="stylesheet" href="styles.css">
   <script defer src="script.js"></script>
 </head>
 <body>
-  <header>
-    <h1>Italian Club 🇮🇹</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="events.html" class="active">Events</a></li>
-        <li><a href="membership.html">Membership</a></li>
-      </ul>
-      <button id="darkModeToggle" class="btn small" aria-label="Toggle Dark Mode">🌙 Dark Mode</button>
-    </nav>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="demo-banner">Academic portfolio prototype · April 2025 · No memberships or RSVPs are collected.</div>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html"><span class="flag-mark" aria-hidden="true"></span>Italian Club<span class="brand-subtitle">UNC Charlotte · Academic project</span></a>
+      <nav aria-label="Main navigation">
+        <ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="events.html" class="active" aria-current="page">Events</a></li><li><a href="membership.html">Membership</a></li></ul>
+      </nav>
+      <button id="darkModeToggle" class="btn small secondary" type="button" aria-pressed="false" aria-label="Dark mode">Dark mode</button>
+    </div>
   </header>
-
-  <main>
-    <section class="upcoming-events">
-      <h2>📅 Upcoming Events</h2>
-
-      <div class="event">
-        <h3>Pasta Night 🍝</h3>
-        <p>Join us for an evening of homemade pasta and great company!</p>
-        <p><strong>Date:</strong> March 15, 2025 | <strong>Location:</strong> Greek Village, House #13 🏡</p>
-        <button class="btn" onclick="openModal()" aria-label="RSVP for Pasta Night">RSVP Now</button>
-      </div>
-
-      <div class="event">
-        <h3>Italian Film Night 🎬</h3>
-        <p>Experience the magic of Italian cinema with classics and modern hits.</p>
-        <p><strong>Date:</strong> April 5, 2025 | <strong>Location:</strong> Student Union Theater 🎭</p>
-        <button class="btn" onclick="openModal()" aria-label="RSVP for Italian Film Night">RSVP Now</button>
+  <main id="main" tabindex="-1">
+    <section class="page-intro"><p class="eyebrow">Food, film & culture</p><h1>Events that bring us together</h1><p class="lead">Explore the sample events and image gallery from the original project.</p><p class="notice">These are historical examples from 2025, not upcoming events. RSVP buttons demonstrate the interface and do not register you.</p></section>
+    <section aria-labelledby="sample-events-heading">
+      <h2 id="sample-events-heading">Sample events · Spring 2025</h2>
+      <div class="event-grid">
+        <article class="event"><span class="tag">Food & community</span><h3>Pasta Night</h3><p>An evening of homemade pasta and great company.</p><p class="event-meta"><strong>Date:</strong> March 15, 2025<br><strong>Location:</strong> Greek Village, House #13</p><button class="btn" type="button" data-rsvp="Pasta Night" aria-haspopup="dialog">Preview RSVP</button></article>
+        <article class="event"><span class="tag">Film & conversation</span><h3>Italian Film Night</h3><p>Experience Italian cinema with classics and modern hits.</p><p class="event-meta"><strong>Date:</strong> April 5, 2025<br><strong>Location:</strong> Student Union Theater</p><button class="btn" type="button" data-rsvp="Italian Film Night" aria-haspopup="dialog">Preview RSVP</button></article>
       </div>
     </section>
-
-    <section class="past-events">
-      <h2>📸 Past Events</h2>
-      <div class="carousel">
-        <button class="carousel-btn prev" onclick="moveSlide(-1)" aria-label="Previous slide">&#10094;</button>
-
-        <div class="carousel-slide fade">
-          <img src="pasta-night.jpg" alt="Pasta Night 2024" />
-          <p>Pasta Night 2024 🍝 - An unforgettable night of Italian cuisine!</p>
-        </div>
-
-        <div class="carousel-slide fade">
-          <img src="film-night.png" alt="Italian Film Night" />
-          <p>Film Night 🎬 - <em>Welcome Venice</em> by Andrea Segre (2021)</p>
-        </div>
-
-        <div class="carousel-slide fade">
-          <img src="culture-festival.jpg" alt="Culture Festival" />
-          <p>Culture Festival 🇮🇹🎭 - Showcasing Italian traditions.</p>
-        </div>
-
-        <button class="carousel-btn next" onclick="moveSlide(1)" aria-label="Next slide">&#10095;</button>
+    <section aria-labelledby="gallery-heading">
+      <div class="section-heading"><p class="eyebrow">Original project assets</p><h2 id="gallery-heading">Event gallery</h2><p>Images and captions preserved from the academic prototype.</p></div>
+      <div class="carousel card" role="region" aria-roledescription="carousel" aria-label="Project event gallery">
+        <div class="carousel-slide"><figure><img src="pasta-night.jpg" alt="Pasta Night project image" loading="lazy"><figcaption>Pasta Night 2024 · Italian cuisine and community.</figcaption></figure></div>
+        <div class="carousel-slide" hidden><figure><img src="film-night.png" alt="Italian Film Night project image" loading="lazy"><figcaption>Film Night · <em>Welcome Venice</em> by Andrea Segre (2021).</figcaption></figure></div>
+        <div class="carousel-slide" hidden><figure><img src="culture-festival.jpg" alt="Culture Festival project image" loading="lazy"><figcaption>Culture Festival · Showcasing Italian traditions.</figcaption></figure></div>
+        <div class="carousel-controls"><button id="prevSlide" class="btn secondary small" type="button" aria-label="Previous gallery image">Previous</button><p id="slideStatus" aria-live="off">1 of 3</p><button id="nextSlide" class="btn secondary small" type="button" aria-label="Next gallery image">Next</button><button id="pauseCarousel" class="btn secondary small" type="button" aria-label="Pause automatic slideshow" aria-pressed="false">Pause</button></div>
       </div>
     </section>
   </main>
-
-  <div id="modal" class="modal" role="dialog" aria-modal="true" aria-label="RSVP confirmation">
-    <div class="modal-content">
-      <span class="close-button" onclick="closeModal()" aria-label="Close">&times;</span>
-      <p>🎉 Thank you for your RSVP!</p>
-    </div>
-  </div>
-
+  <dialog id="rsvpDialog" aria-labelledby="rsvp-title" aria-describedby="rsvp-description">
+    <div class="modal-content"><p class="eyebrow">Interface demonstration</p><h2 id="rsvp-title">RSVP preview</h2><p id="rsvp-description">This is a portfolio demonstration. No RSVP has been submitted or saved.</p><button id="closeModal" class="btn" type="button" autofocus>Close preview</button></div>
+  </dialog>
   <footer>
-    <p>
-      © 2025 Italian Club | Follow us on
-      <a href="https://www.instagram.com/italianclub_uncc/?hl=en" target="_blank" rel="noopener noreferrer">
-        <i class="fa-brands fa-instagram"></i> Instagram</a>
-    </p>
+    <div class="footer-inner"><p>Italian Club · Academic prototype, 2025</p><a href="https://www.instagram.com/italianclub_uncc/?hl=en" target="_blank" rel="noopener noreferrer">Instagram <span class="sr-only">(opens in a new tab)</span><span aria-hidden="true">↗</span></a></div>
   </footer>
 </body>
 </html>
